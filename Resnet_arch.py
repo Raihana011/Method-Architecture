@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras import layers
+from tensorflow.keras.utils import plot_model
 def create_resnet_model():
     inputs = tf.keras.Input(shape=(224, 224, 3))
 
