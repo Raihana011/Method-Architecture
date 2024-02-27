@@ -20,14 +20,14 @@ def create_resnet_model():
         x = layers.Activation("relu")(x)
         x = layers.Add()([x, x_temp])
 
-    # Global average pooling and output
+   
     x = layers.GlobalAveragePooling2D()(x)
     outputs = layers.Dense(10, activation="softmax")(x)
 
     model = tf.keras.Model(inputs=inputs, outputs=outputs)
     return model
 
-# Create the model
+
 model = create_resnet_model()
 
 # Print model summary
